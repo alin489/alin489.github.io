@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://663q65.natappfree.cc/kamen/admin/login.php -->
+
+<html lang="zh-cn" style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>用户登录</title>
+  <link href="./用户登录_files/bootstrap.min.css" rel="stylesheet">
+  <link href="./用户登录_files/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./用户登录_files/main.css">
+  <link rel="stylesheet" href="./用户登录_files/themes.css">
+  <link id="theme-link" rel="stylesheet" href="./用户登录_files/amethyst-2.4.css">
+  <script src="./用户登录_files/modernizr.min.js.下载"></script>
+  <script src="./用户登录_files/jquery.min.js.下载"></script>
+  <script src="./用户登录_files/bootstrap.min.js.下载"></script>
+  <script src="./用户登录_files/plugins.js.下载"></script>
+  <script src="./用户登录_files/app2.js.下载"></script>
+
+  <!--[if lt IE 9]>
+    <script src="//cdn.staticfile.org/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+<style type="text/css">.music{position:fixed!important;position:absolute;width:70px;height:75px;z-index:9999;right:0;bottom:0;top:expression(offsetParent.scrollTop+offsetParent.clientHeight-150);cursor:pointer;}</style></head>
+<body class="">
+
+<link href="./用户登录_files/sweetalert.min.css" rel="stylesheet">
+
+<script src="./用户登录_files/sweetalert.min.js.下载"></script>
+
+<script type="text/javascript">
+
+swal('','请输入正确的账号和密码','success');    function AddFavorite(title, url) {
+
+  try {
+
+      window.external.addFavorite(url, title);
+
+  }
+
+catch (e) {
+
+     try {
+
+       window.sidebar.addPanel(title, url, "");
+
+    }
+
+     catch (e) {
+
+         alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请使用Ctrl+D进行添加! \n\n手机用户可以使用添加书签方式保存本站!");
+
+     }
+
+  }
+
+}
+
+</script><div class="sweet-overlay" tabindex="-1" style="opacity: -0.02; display: none;"></div><div class="sweet-alert hideSweetAlert" data-custom-class="" data-has-cancel-button="false" data-has-confirm-button="true" data-allow-outside-click="false" data-has-done-function="false" data-animation="pop" data-timer="null" style="display: none; margin-top: -137px; opacity: -0.04;"><div class="sa-icon sa-error" style="display: none;">
+      <span class="sa-x-mark">
+        <span class="sa-line sa-left"></span>
+        <span class="sa-line sa-right"></span>
+      </span>
+    </div><div class="sa-icon sa-warning" style="display: none;">
+      <span class="sa-body"></span>
+      <span class="sa-dot"></span>
+    </div><div class="sa-icon sa-info" style="display: none;"></div><div class="sa-icon sa-success" style="display: block;">
+      <span class="sa-line sa-tip"></span>
+      <span class="sa-line sa-long"></span>
+
+      <div class="sa-placeholder"></div>
+      <div class="sa-fix"></div>
+    </div><div class="sa-icon sa-custom" style="display: none;"></div><h2></h2>
+    <p style="display: block;">欢迎使用系统功能 ！</p>
+    <fieldset>
+      <input type="text" tabindex="3" placeholder="">
+      <div class="sa-input-error"></div>
+    </fieldset><div class="sa-error-container">
+      <div class="icon">!</div>
+      <p>Not valid!</p>
+    </div><div class="sa-button-container">
+      <button class="cancel" tabindex="2" style="display: none;">Cancel</button>
+      <div class="sa-confirm-button-container">
+        <button class="confirm" tabindex="1" style="display: inline-block; background-color: rgb(140, 212, 245); box-shadow: rgba(140, 212, 245, 0.8) 0px 0px 2px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px inset;">OK</button><div class="la-ball-fall">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div></div>
+ 
+
+
+
+<div></div><br>
+<div></div><br>
+<div></div><br>
+<div></div><br>
+<div></div><br>
+<div></div><br>
+<div></div><br>
+<div></div><br>
+
+
+
+
+
+<div id="login-container">
+	
+<div></div><br>
+<div></div><br>
+<div></div><br>
+<div></div><br>
+<div></div><br>
+<div></div><br>
+<div></div><br>
+<div></div><br>
+
+	
+		<form id="form-login" action="error.php" method="post" class="form-horizontal">
+			<div class="form-group">
+				<div class="col-xs-12">
+					<div class="input-group">
+					<span class="input-group-addon" style="border-radius: 20px 00px 00px 20px;"><span class="glyphicon glyphicon-user"></span></span>
+						<input type="text" id="user" name="user" class="form-control" placeholder="账号" style="border-radius: 0px 20px 20px 0px;">  
+					</div>
+				</div>
+			</div>
+            			<div class="form-group">
+				<div class="col-xs-12">
+					<div class="input-group">
+						<span class="input-group-addon" style="border-radius: 20px 00px 00px 20px;"><span class="glyphicon glyphicon-lock"></span></span>
+						<input type="password" id="pass" name="pass" class="form-control" placeholder="密码" style="border-radius: 0px 20px 20px 0px;">
+					</div>  
+				</div>
+			</div>
+						<div class="form-group">
+				<div class="col-xs-12">
+					<div class="input-group">
+					
+					
+					</div>
+				</div>
+			</div>
+						<div class="form-group form-actions">
+				<div class="col-xs-12">
+					<button type="submit" class="btn btn-effect-ripple btn-block btn-info" style="border-radius: 80px; overflow: hidden; position: relative;"><i class="fa fa-check"></i>登录</button>
+				</div>
+			</div>
+				
+		</form>
+		<!--<form id="form-login" action="yf.png" method="post" class="form-horizontal">-->
+		<!--<div class="form-group form-actions">-->
+		<!--		<div class="col-xs-12">-->
+		<!--			<button type="submit" class="btn btn-effect-ripple btn-block btn-info" style="border-radius: 80px; overflow: hidden; position: relative;"><i class="fa fa-check"></i>支付扫码付款登录</button>-->
+		<!--		</div>-->
+		<!--	</div>-->
+		<!--</form>-->
+	
+	
+            <center>
+         [<span id="localtime"><font color="#800080">2020-04-19丨17:35:59丨星期日</font></span>
+            <script type="text/javascript">function showLocale(objD)
+{var str,colorhead,colorfoot;var yy = objD.getYear();
+if(yy<1900) yy = yy+1900;
+        var MM = objD.getMonth()+1;
+    if(MM<10) MM = '0' + MM;
+    var dd = objD.getDate();
+    if(dd<10) dd = '0' + dd;
+    var hh = objD.getHours();
+    if(hh<10) hh = '0' + hh;
+    var mm = objD.getMinutes();
+    if(mm<10) mm = '0' + mm;
+    var ss = objD.getSeconds();
+    if(ss<10) ss = '0' + ss;
+    var ww = objD.getDay();
+    if  ( ww==0 )  colorhead="<font color=\"#800080\">";
+    if  ( ww > 0 && ww < 6 )  colorhead="<font color=\"#800080\">";
+    if  ( ww==6 )  colorhead="<font color=\"#800080\">";
+    if  (ww==0)  ww="星期日";
+    if  (ww==1)  ww="星期一";
+    if  (ww==2)  ww="星期二";
+    if  (ww==3)  ww="星期三";
+    if  (ww==4)  ww="星期四";
+    if  (ww==5)  ww="星期五";
+    if  (ww==6)  ww="星期六";
+    colorfoot="</font>"
+    str = colorhead + yy + "-" + MM + "-" + dd + "丨" + hh + ":" + mm + ":" + ss + "丨" + ww + colorfoot;
+    return(str);}function tick()
+{var today;today = new Date();document.getElementById("localtime").innerHTML = showLocale(today);window.setTimeout("tick()", 1000);}
+tick();</script>]
+                  </center> 
+
+
+           <center><img src="./用户登录_files/0060lm7Tly1fq7t8flisyg30cn00e743.gif" style="box-sizing: border-box; border: 0px; vertical-align: middle; max-width: 98%;"></center>
+
+
+
+<!--泡泡-->
+<script src="./用户登录_files/music.js.下载" type="text/javascript"></script>
+<script src="./用户登录_files/main.js.下载"></script>
+<div id="cover">
+<script>
+(function webpackUniversalModuleDefinition(a,b){if(typeof exports==="object"&&typeof module==="object"){module.exports=b()}else{if(typeof define==="function"&&define.amd){define([],b)}else{if(typeof exports==="object"){exports["POWERMODE"]=b()}else{a["POWERMODE"]=b()}}}})(this,function(){return(function(a){var b={};function c(e){if(b[e]){return b[e].exports}var d=b[e]={exports:{},id:e,loaded:false};a[e].call(d.exports,d,d.exports,c);d.loaded=true;return d.exports}c.m=a;c.c=b;c.p="";return c(0)})([function(c,g,b){var d=document.createElement("canvas");d.width=window.innerWidth;d.height=window.innerHeight;d.style.cssText="position:fixed;top:0;left:0;pointer-events:none;z-index:999999";window.addEventListener("resize",function(){d.width=window.innerWidth;d.height=window.innerHeight});document.body.appendChild(d);var a=d.getContext("2d");var n=[];var j=0;var k=120;var f=k;var p=false;o.shake=true;function l(r,q){return Math.random()*(q-r)+r}function m(r){if(o.colorful){var q=l(0,360);return"hsla("+l(q-10,q+10)+", 100%, "+l(50,80)+"%, "+1+")"}else{return window.getComputedStyle(r).color}}function e(){var t=document.activeElement;var v;if(t.tagName==="TEXTAREA"||(t.tagName==="INPUT"&&t.getAttribute("type")==="text")){var u=b(1)(t,t.selectionStart);v=t.getBoundingClientRect();return{x:u.left+v.left,y:u.top+v.top,color:m(t)}}var s=window.getSelection();if(s.rangeCount){var q=s.getRangeAt(0);var r=q.startContainer;if(r.nodeType===document.TEXT_NODE){r=r.parentNode}v=q.getBoundingClientRect();return{x:v.left,y:v.top,color:m(r)}}return{x:0,y:0,color:"transparent"}}function h(q,s,r){return{x:q,y:s,alpha:1,color:r,velocity:{x:-1+Math.random()*2,y:-3.5+Math.random()*2}}}function o(){var t=e();var s=5+Math.round(Math.random()*10);while(s--){n[j]=h(t.x,t.y,t.color);j=(j+1)%500}f=k;if(!p){requestAnimationFrame(i)}if(o.shake){var r=1+2*Math.random();var q=r*(Math.random()>0.5?-1:1);var u=r*(Math.random()>0.5?-1:1);document.body.style.marginLeft=q+"px";document.body.style.marginTop=u+"px";setTimeout(function(){document.body.style.marginLeft="";document.body.style.marginTop=""},75)}}o.colorful=false;function i(){if(f>0){requestAnimationFrame(i);f--;p=true}else{p=false}a.clearRect(0,0,d.width,d.height);for(var q=0;q<n.length;++q){var r=n[q];if(r.alpha<=0.1){continue}r.velocity.y+=0.075;r.x+=r.velocity.x;r.y+=r.velocity.y;r.alpha*=0.96;a.globalAlpha=r.alpha;a.fillStyle=r.color;a.fillRect(Math.round(r.x-1.5),Math.round(r.y-1.5),3,3)}}requestAnimationFrame(i);c.exports=o},function(b,a){(function(){var d=["direction","boxSizing","width","height","overflowX","overflowY","borderTopWidth","borderRightWidth","borderBottomWidth","borderLeftWidth","borderStyle","paddingTop","paddingRight","paddingBottom","paddingLeft","fontStyle","fontVariant","fontWeight","fontStretch","fontSize","fontSizeAdjust","lineHeight","fontFamily","textAlign","textTransform","textIndent","textDecoration","letterSpacing","wordSpacing","tabSize","MozTabSize"];var e=window.mozInnerScreenX!=null;function c(k,l,o){var h=o&&o.debug||false;if(h){var i=document.querySelector("#input-textarea-caret-position-mirror-div");if(i){i.parentNode.removeChild(i)}}var f=document.createElement("div");f.id="input-textarea-caret-position-mirror-div";document.body.appendChild(f);var g=f.style;var j=window.getComputedStyle?getComputedStyle(k):k.currentStyle;g.whiteSpace="pre-wrap";if(k.nodeName!=="INPUT"){g.wordWrap="break-word"}g.position="absolute";if(!h){g.visibility="hidden"}d.forEach(function(p){g[p]=j[p]});if(e){if(k.scrollHeight>parseInt(j.height)){g.overflowY="scroll"}}else{g.overflow="hidden"}f.textContent=k.value.substring(0,l);if(k.nodeName==="INPUT"){f.textContent=f.textContent.replace(/\s/g,"\u00a0")}var n=document.createElement("span");n.textContent=k.value.substring(l)||".";f.appendChild(n);var m={top:n.offsetTop+parseInt(j["borderTopWidth"]),left:n.offsetLeft+parseInt(j["borderLeftWidth"])};if(h){n.style.backgroundColor="#aaa"}else{document.body.removeChild(f)}return m}if(typeof b!="undefined"&&typeof b.exports!="undefined"){b.exports=c}else{window.getCaretCoordinates=c}}())}])});
+POWERMODE.colorful=true;POWERMODE.shake=false;document.body.addEventListener("input",POWERMODE);
+</script>
+<!--泡泡-->
+
+  <script>//禁止右键 
+function click(e) { 
+if (document.all) { 
+if (event.button==2||event.button==3) { alert("禁止恶意拿代码的"); 
+oncontextmenu='return false'; 
+} 
+} 
+if (document.layers) { 
+if (e.which == 3) { 
+oncontextmenu='return false'; 
+} 
+} 
+} 
+if (document.layers) { 
+document.captureEvents(Event.MOUSEDOWN); 
+} 
+document.onmousedown=click; 
+document.oncontextmenu = new Function("return false;") 
+document.onkeydown =document.onkeyup = document.onkeypress=function(){  
+if(window.event.keyCode == 12) {  
+window.event.returnValue=false; 
+return(false);  
+}  
+} 
+</script> 
+  
+  
+<script>//禁止F12 
+function fuckyou(){ 
+window.close(); //关闭当前窗口(防抽) 
+window.location="about:blank"; //将当前窗口跳转置空白页 
+} 
+  
+function click(e) { 
+if (document.all) { 
+ if (event.button==2||event.button==3) {  
+alert("禁止恶意拿代码的"); 
+oncontextmenu='return false'; 
+} 
+  
+} 
+if (document.layers) { 
+if (e.which == 3) { 
+oncontextmenu='return false'; 
+} 
+} 
+} 
+if (document.layers) { 
+fuckyou(); 
+document.captureEvents(Event.MOUSEDOWN); 
+} 
+document.onmousedown=click; 
+document.oncontextmenu = new Function("return false;") 
+document.onkeydown =document.onkeyup = document.onkeypress=function(){  
+if(window.event.keyCode == 123) {  
+fuckyou(); 
+window.event.returnValue=false; 
+return(false);  
+}  
+} 
+</script> 
+</div><canvas width="1366" height="576" style="position: fixed; top: 0px; left: 0px; pointer-events: none; z-index: 999999;"></canvas></body></html>

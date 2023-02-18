@@ -1,0 +1,41 @@
+﻿// < ![CDATA[
+var music = document.getElementById("music");
+var musicArr=[
+{url:'//music.163.com/song/media/outer/url?id=1365898499.mp3',title:"失眠飞行-接个吻，开一枪 / 沈以诚 / 薛明媛"},
+];
+$("#audio").click(function(){
+	if(music.paused){music.play();
+	   $("#audio").removeClass("pause").addClass("play");
+	}else{music.pause();
+	   $("#audio").removeClass("play").addClass("pause");
+        }
+});
+function randomMusic(){
+   var isone=$("#music").attr('src');
+   var noone=musicArr[parseInt(Math.random()*musicArr.length)];
+   if (noone.url==isone){var noone=musicArr[parseInt(Math.random()*musicArr.length)];}
+   $("#music").attr('src',noone.url);
+   $("#audio").attr('title',noone.title);
+}
+randomMusic();
+$("#music").on('ended',function(){
+   randomMusic();	
+});
+function c(){
+var imgObj = document.getElementById("d");
+var Flag=(imgObj.getAttribute("src",2)=="//ku.oioweb.cn/img/weimusic2.gif");
+imgObj.src=Flag?"//ku.oioweb.cn/img/weimusic1.gif":"//ku.oioweb.cn/img/weimusic2.gif";
+}
+function loadCssCode(code){
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    style.rel = 'stylesheet';
+    //for Chrome Firefox Opera Safari
+    style.appendChild(document.createTextNode(code));
+    //for IE
+    var head = document.getElementsByTagName('head')[0];
+    head.appendChild(style);
+}
+loadCssCode('.music{position:fixed!important;position:absolute;width:70px;height:75px;z-index:9999;right:0;bottom:0;top:expression(offsetParent.scrollTop+offsetParent.clientHeight-150);cursor:pointer;}');
+
+// ]]>
