@@ -1,231 +1,196 @@
 <!DOCTYPE html>
+<!--初始化页面并设置禁用右键属性-->
+<html lang="zh" onselectstart="return false" oncontextmenu=self.event.returnValue=false>
+	<!--head模块-->
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-title" content="alin网络">
-    <meta itemprop="name" content="我在人间凑数的日子">
-    <meta name="apple-mobile-web-app-title" content="alin网络">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta name="author" content="alin网络">
-    <meta name="keywords" content="alin网络">
-    <meta name="description" content="alin网络">
+	<head>
+		<!--字符编码-->
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<!--语言-->
+		<meta http-equiv="Content-Language" contect="zh">
+		<!--移动端适配-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 避免IE使用兼容模式 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!--窗口设定-->
+		<meta http-equiv="Window-target" content="_top">
+		<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+		<meta name="HandheldFriendly" content="true">
+		<!-- 微软的老式浏览器 -->
+		<meta name="MobileOptimized" content="320">
+		<!-- windows phone 点击无高光 -->
+		<meta name="msapplication-tap-highlight" content="no">
+		<!--百度禁止转码-->
+		<meta http-equiv="Cache-Control" content="no-siteapp">
+		<!--浏览器的兼容配置-->
+		<!--Microsoft Internet Explorer-->
+		<!--是否开启cleartype显示效果-->
+		<meta http-equiv="cleartype" content="on">
+		<meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+		<!--Pinned Site-->
+		<!-- IE 10 / Windows 8 -->
+		<meta name="msapplication-TileImage" content="pinned-tile-144.png">
+		<meta name="msapplication-TileColor" content="#009900">
+		<!--IE 11 / Windows 9.1-->
+		<meta name="msapplication-config" content="ieconfig.xml">
+		<!--Google Chrome-->
+		<!--禁止自动翻译-->
+		<meta name="google" value="notranslate">
+		<!--360浏览器-->
+		<!--极速模式-->
+		<meta name="renderer" content="webkit">
+		<!--QQ手机浏览器-->
+		<!--锁定屏幕在特定方向-->
+		<meta name="x5-orientation" content="portrait">
+		<!-- 全屏显示 -->
+		<meta name="x5-fullscreen" content="true">
+		<!-- 应用模式 -->
+		<meta name="x5-page-mode" content="app">
+		<!--UC浏览器-->
+		<!-- uc强制竖屏 -->
+		<meta name="screen-orientation" content="portrait">
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes">
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application">
+		<!-- 禁止自动探测手机/邮箱号码 -->
+		<meta name="format-detection" content="telphone=no, email=no">
+		<!-- Add to Home Screen添加到主屏 -->
+		<!-- 是否启用 WebApp 全屏模式 -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- 设置状态栏的背景颜色,只有在 “apple-mobile-web-app-capable” content=”yes” 时生效 -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- 添加到主屏后的标题 -->
+		<meta name="apple-mobile-web-app-title" content="alin489的小屋">
+		<!--Google Android-->
+		<meta name="theme-color" content="#CCFFFF">
+		<!-- 添加到主屏 -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<!--引入核心css-->
+		<link rel="stylesheet" href="./heheda/css/main.css" type="text/css" />
+		<!-- 引入FontAwesome图标库 -->
+		<link rel="stylesheet" href="./heheda/lib/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" />
+		<!-- 音乐播放器 -->
+		<link rel="stylesheet" href="https://www.blog.heheda.top/zplayer/css/zplayer.css" type="text/css" />
+		<!--PWA配置-->
+		<link rel='manifest' href='./manifest.json' />
+		<!--跨域内容预解析-->
+		<link rel="preconnect" href="https://cartoon.heheda.top/" crossorigin />
+		<link rel="preconnect" href="https://tva1.sinaimg.cn/" crossorigin />
+		<link rel="preconnect" href="https://q2.qlogo.cn/" crossorigin />
+		<link rel="dns-prefetch" href="https://cartoon.heheda.top/" />
+		<link rel="dns-prefetch" href="https://tva1.sinaimg.cn/" />
+		<link rel="dns-prefetch" href="https://q2.qlogo.cn/" />
+		<!--SEO优化-->
+		<!--标题-->
+		<title>alin489</title>
+		<!--关键词-->
+		<meta name="keywords" content="个人主页,引导页,导航,博客,音乐,电影,壁纸,解析,源码,教程">
+		<!--描述-->
+		<meta name="description"
+			content="alin489，爱好另类。同时，他对青春的赞美、对眼前事物的珍视之情、对知己挚友的珍惜，博取了众人瞩目。">
+		<!--作者 author-->
+		<meta name="author" content="alin489">
+		<!--搜索引擎索引方式-->
+		<meta name="robots" content="all">
+		<!--logo-->
+		<link rel="shortcuticon" href="./favicon.ico" />
+	</head>
+	<!--body模块-->
 
-    <link rel="shortcut icon" href="https://www.qyun.vip/favicon.ico" />
-    <link rel="stylesheet" href="css/style.css">
-    <title>alin489网络–114管家欢迎你</title>
-</head>
-
-<body>
-    <div id="bg">
-        <div class="backstretch"></div>
-    </div>
-    <div class="container">
-
-        <header id="header">           
-            <nav class="menu">
-                <div class="list-h">
-                    <a  onclick="index()"><svg t="1664115306404" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg" p-id="2118" width="50" height="50">
-                            <path
-                                d="M784 912H240a128 128 0 0 1-128-128V419.66a128 128 0 0 1 55.91-105.77l272-185.4a128 128 0 0 1 144.18 0l272 185.4A128 128 0 0 1 912 419.66V784a128 128 0 0 1-128 128z"
-                                fill="#FFFFFF" p-id="2119"></path>
-                            <path
-                                d="M784 896H272a112 112 0 0 1-112-112V427.24a112 112 0 0 1 49-92.58l242.63-165.21A112 112 0 0 1 574 167l269.3 168.11a112 112 0 0 1 52.7 95V784a112 112 0 0 1-112 112z"
-                                fill="#FFE07A" p-id="2120"></path>
-                            <path
-                                d="M784 928H240c-79.4 0-144-64.6-144-144V419.66a143.91 143.91 0 0 1 62.89-119l272-185.4a144 144 0 0 1 162.22 0l272 185.4a143.91 143.91 0 0 1 62.89 119V784c0 79.4-64.6 144-144 144zM512 122.12a111.8 111.8 0 0 0-63.08 19.59l-272 185.4A111.93 111.93 0 0 0 128 419.66V784a112.12 112.12 0 0 0 112 112h544a112.12 112.12 0 0 0 112-112V419.66a111.93 111.93 0 0 0-48.92-92.55l-272-185.4A111.8 111.8 0 0 0 512 122.12z"
-                                fill="#333333" p-id="2121"></path>
-                            <path d="M256 449m32 0l128 0q32 0 32 32l0 0q0 32-32 32l-128 0q-32 0-32-32l0 0q0-32 32-32Z"
-                                fill="#333333" p-id="2122"></path>
-                            <path d="M432 656h160a64 64 0 0 1 64 64v192H368V720a64 64 0 0 1 64-64z" fill="#FFFFFF"
-                                p-id="2123"></path>
-                            <path d="M464 704h128a48 48 0 0 1 48 48v144H464a48 48 0 0 1-48-48v-96a48 48 0 0 1 48-48z"
-                                fill="#FF9580" p-id="2124"></path>
-                            <path
-                                d="M672 928H352V720a80.09 80.09 0 0 1 80-80h160a80.09 80.09 0 0 1 80 80z m-288-32h256V720a48.05 48.05 0 0 0-48-48H432a48.05 48.05 0 0 0-48 48z"
-                                fill="#333333" p-id="2125"></path>
-                        </svg>
-                        <p>首页</p>
-                    </a>
-
-                    <a onclick="about()"><svg t="1664115194296" class="icon" viewBox="0 0 1024 1024"
-                            version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8218" width="50" height="50">
-                            <path
-                                d="M80 144m128 0l608 0q128 0 128 128l0 480q0 128-128 128l-608 0q-128 0-128-128l0-480q0-128 128-128Z"
-                                fill="#FFFFFF" p-id="8219"></path>
-                            <path
-                                d="M128 193m112 0l576 0q112 0 112 112l0 447q0 112-112 112l-576 0q-112 0-112-112l0-447q0-112 112-112Z"
-                                fill="#A89BFA" p-id="8220"></path>
-                            <path
-                                d="M816 896H208c-79.4 0-144-64.6-144-144V272c0-79.4 64.6-144 144-144h608c79.4 0 144 64.6 144 144v480c0 79.4-64.6 144-144 144zM208 160A112.12 112.12 0 0 0 96 272v480a112.12 112.12 0 0 0 112 112h608a112.12 112.12 0 0 0 112-112V272a112.12 112.12 0 0 0-112-112z"
-                                fill="#333333" p-id="8221"></path>
-                            <path d="M352 416m-112 0a112 112 0 1 0 224 0 112 112 0 1 0-224 0Z" fill="#FFFFFF"
-                                p-id="8222"></path>
-                            <path d="M368 432m-80 0a80 80 0 1 0 160 0 80 80 0 1 0-160 0Z" fill="#FFBF80" p-id="8223">
-                            </path>
-                            <path
-                                d="M352 544a128 128 0 1 1 128-128 128.14 128.14 0 0 1-128 128z m0-224a96 96 0 1 0 96 96 96.11 96.11 0 0 0-96-96z"
-                                fill="#333333" p-id="8224"></path>
-                            <path
-                                d="M528 670a167.6 167.6 0 0 0-56.48-125.64 160 160 0 0 1-231.42 8A167.43 167.43 0 0 0 192 670a66 66 0 0 0 66 66h204a66 66 0 0 0 66-66z"
-                                fill="#FFFFFF" p-id="8225"></path>
-                            <path
-                                d="M528.64 681.13c0-29.5-6.79-51.78-21-72.53a32.08 32.08 0 0 0-43.26-9.27c-28.74 17.77-60.41 32.55-95.35 32.55-30.44 0-70.44-4.68-100.45-14.61a32 32 0 0 0-41.1 23.27c-2.8 12-3.51 25.46-3.51 40.59 0 21.87 15 39.23 32.84 39.23h212c25.2 0 59.84-17.36 59.84-39.23z"
-                                fill="#FFBF80" p-id="8226"></path>
-                            <path
-                                d="M462 752H258a82.1 82.1 0 0 1-82-82 183 183 0 0 1 52.68-128.87 16 16 0 0 1 22.61-0.22 144 144 0 0 0 208.28-7.19 16 16 0 0 1 22.57-1.32A184.21 184.21 0 0 1 544 670a82.1 82.1 0 0 1-82 82zM241.41 574.92A150.92 150.92 0 0 0 208 670a50.06 50.06 0 0 0 50 50h204a50.06 50.06 0 0 0 50-50 152.19 152.19 0 0 0-40.27-103 176 176 0 0 1-230.32 7.95z"
-                                fill="#333333" p-id="8227"></path>
-                            <path d="M592 384m32 0l160 0q32 0 32 32l0 0q0 32-32 32l-160 0q-32 0-32-32l0 0q0-32 32-32Z"
-                                fill="#333333" p-id="8228"></path>
-                            <path d="M656 576m32 0l96 0q32 0 32 32l0 0q0 32-32 32l-96 0q-32 0-32-32l0 0q0-32 32-32Z"
-                                fill="#333333" p-id="8229"></path>
-                        </svg>
-                        <p>关于</p>
-                    </a>
-
-                    <a href="alin489.github.io" target="_blank"><svg t="1664115959373" class="icon"
-                            viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1548"
-                            width="50" height="50">
-                            <path d="M512 512m-420 0a420 420 0 1 0 840 0 420 420 0 1 0-840 0Z" fill="#FFFFFF"
-                                p-id="1549"></path>
-                            <path d="M534.5 534.5m-397.5 0a397.5 397.5 0 1 0 795 0 397.5 397.5 0 1 0-795 0Z"
-                                fill="#A89BFA" p-id="1550"></path>
-                            <path d="M677 347.9375L272 482l195 75 75 195 135-404.0625z" fill="#FFFFFF" p-id="1551">
-                            </path>
-                            <path
-                                d="M618.36875001 402.359375l-237.75000002 82.92187501a15 15 0 0 0-1.74374999 27.59062499l88.03125001 43.828125L542 722l95.765625-300.9375a15 15 0 0 0-19.39687501-18.703125z"
-                                fill="#FFBF80" p-id="1552"></path>
-                            <path
-                                d="M512 947A435.103125 435.103125 0 0 1 342.678125 111.190625a435.1125 435.1125 0 0 1 338.65312501 801.61875A432.3375 432.3375 0 0 1 512 947z m0-840C288.678125 107 107 288.678125 107 512s181.678125 405 405 405 405-181.678125 405-405S735.321875 107 512 107z"
-                                fill="#333333" p-id="1553"></path>
-                            <path
-                                d="M542 767a15 15 0 0 1-13.996875-9.61875001l-72.60937501-188.77499998-188.77499998-72.60937501a15 15 0 0 1 0.66562499-28.2375l405-134.0625a15 15 0 0 1 18.94687499 18.99375l-135 404.0625A15 15 0 0 1 542.3375 767zM316.540625 483.059375l155.84062499 59.94375a15 15 0 0 1 8.61562501 8.61562501l60 156.01874999L653.28125001 371.590625z"
-                                fill="#333333" p-id="1554"></path>
-                        </svg>
-                        <p>博客</p>
-                    </a>
-                </div>
-            </nav>
-        </header>
-
-        <div class="page">
-            <div class="content">
-                <div class="header">
-                    <img src="https://qm.qq.com/cgi-bin/qm/qr?k=B0TZ5O-yymEygCXa-WgiTJnV0NW9yn1T&noverify=0&personal_qrcode_source=3">
-                </div>
-                <div class="quote">
-                    <i class="iconfont icon-Artboard1"></i>
-                    <strong>一条咸鱼 </strong>
-                    <span>爱好计算机，小说，动漫，瞎折腾浪费时间最在行</span>
-                    <i class="iconfont icon-Artboard"></i>
-                </div>
-                <div class="segment" style="border-color: rgb(245, 150, 170);" id="index">
-                    <div class="label" style="color: rgb(245, 150, 170);">
-                        <span>说说</span>
-                    </div>
-                    <div class="markdown index">
-                        <p>I leave no trace of wings in the air, but I am glad I have had my flight.</p>
-                    </div>
-                </div>
-
-                <div class="segment" style="border-color: rgb(245, 150, 170);display:none" id="about">
-                    <div class="label" style="color: rgb(245, 150, 170);">
-                        <span>关于</span>
-                    </div>
-                    <div class="markdown" id="about">
-
-                        <p>
-                            爱好计算机，会去自学自己感兴趣的一切东西
-                        <p>
-                            略懂PS Word Excel；爱好折腾去解决一切问题
-                        <p>
-                            喜欢吃 看小说 看动漫 等等
-                        <p>              
-                        <p>个人QQ：<a href="https://qm.qq.com/cgi-bin/qm/qr?k=B0TZ5O-yymEygCXa-WgiTJnV0NW9yn1T&noverify=0&personal_qrcode_source=3" style="color:blue ;">24513668</a></p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-<footer id="footer">
-            <div class="site-info">
-                <br>
-                <p>©2023丨alin489网络版权所有</a>
-<center>
-    <a target="_blank" href="alin489.github.io" style="display:inline-block; text-decoration:none; height:20px; line-height:20px; text-align:right;"><img src="https://www.nanningcloud.com/Uploads/2022-10-30/bg_logo.nanningcloud.png" style="float:left;"/>填写备案号</a>
-                    <br>
-                    本站已安全运行：<span id="momk"></span>
-                    <script language="javascript">
-                        function star() {
-                            window.location.href = './websigned.mobileconfig';
-                            setTimeout(function () {
-                                window.location.href = "./udid/embedded2.mobileprovision";
-                            }, 3000);
-                        }
-                        function show_date_time() {
-                            window.setTimeout("show_date_time()", 1000);
-                            BirthDay = new Date("2020/11/27");
-                            today = new Date();
-                            timeold = (today.getTime() - BirthDay.getTime());
-                            sectimeold = timeold / 1000
-                            secondsold = Math.floor(sectimeold);
-                            msPerDay = 24 * 60 * 60 * 1000
-                            e_daysold = timeold / msPerDay
-                            daysold = Math.floor(e_daysold);
-                            e_hrsold = (daysold - e_daysold) * -24;
-                            hrsold = Math.floor(e_hrsold);
-                            e_minsold = (hrsold - e_hrsold) * -60;
-                            minsold = Math.floor((hrsold - e_hrsold) * -60);
-                            seconds = Math.floor((minsold - e_minsold) * -60);
-                            momk.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
-                        }
-                        show_date_time();
-                    </script>
-
-                    <style>
-                        #momk {
-                            animation: change 10s infinite;
-                            font-weight: 500;
-                        }
-
-                        @keyframes change {
-                            100% {
-                                color: #7fb7be;
-                            }
-
-                            75% {
-                                color: #2a628f;
-                            }
-
-                            50% {
-                                color: #c49799;
-                            }
-
-                            25% {
-                                color: #e5625e;
-                            }
-
-                            0% {
-                                color: #7880b5;
-                            }
-                        }
-                    </style>
-            </div>
-        </footer>
-        <script>
-            function about() {
-                document.getElementById("about").style.display="block";
-                document.getElementById("index").style.display="none";
-            }
-            
-            function index() {
-                document.getElementById("index").style.display="block";
-                document.getElementById("about").style.display="none";
-            }
-        </script>
-
-
-</body>
+	<body class="is-loading" title="久违久违，欢迎您的到来！开始尽情探索吧！">
+		<!-- Wrapper -->
+		<div id="wrapper">
+			<!-- Main -->
+			<section id="main">
+				<!--header模块-->
+				<header>
+					<!--头像-->
+					<span class="avatar"><img src="http://q1.qlogo.cn/g?b=qq&nk=24513668&s=640" id="logo"
+						title="我的头像" /></span>
+					<!--内容-->
+					<!-- <a href="https://music.163.com/#/song?id=1844756064"
+						rel="noopener" target="_blank" title="欢迎收听知心爱人"> -->
+						<h1>alin489</h1>
+					</a>
+					<!--一言-->
+					<p id="hitokoto" title="我是一个普通的麦手">:D
+						获取中...</p>
+				</header>
+				<!--footer模块-->
+				<footer>
+					<!--上部导航-->
+					<ul class="copylaft">
+						<li><a href="http://chinjua.com:55/denlu" class="fa fa-windows" rel="noopener" target="_blank"
+								title="登录">登录</a></li>
+						<li><a href="http://chinjua.com:55/8000.exe" class="fa fa-music" rel="noopener"
+								target="_blank" title="破解工具（会报毒）">破解工具（会报毒）</a></li>
+						<li><a href="https://bing.heheda.top/" class="fa fa-picture-o" rel="noopener" target="_blank"
+								title="海量Bing图片">必应图库</a></li>
+					</ul>
+					<!--中部导航-->
+					<ul class="icons">
+						<!-- <li><a href="https://huluxia.com/" class="fa fa-globe" rel="noopener" target="_blank"
+								title="葫芦侠">blog</a>葫芦侠
+						</li>
+						<li><a href="https://huluxia.com/" class="fa fa-film" rel="noopener" target="_blank"
+								title="葫芦侠">movie</a>电影</li>
+						<li><a href="https://huluxia.com/" class="fa fa-music" rel="noopener" target="_blank"
+								title="葫芦侠">music</a>音乐</li>
+						<li><a href="https://huluxia.com/" class="fa fa-picture-o" rel="noopener" target="_blank"
+								title="葫芦侠">picture</a>图片</li>
+						<li><a href="https://huluxia.com/" class="fa fa-book" rel="noopener" target="_blank" title="葫芦侠">book</a>小说
+						</li> -->
+						<li><a href="http://chinjua.com:55/8000.exe" class="fa fa-briefcase" rel="noopener" target="_blank"
+							title="解密破解工具（会报毒）">tool</a>工具</li>
+						<li><a href="http://chinjua.com:55/qqkongjian" class="fa fa-camera" rel="noopener" target="_blank"
+							title="QQ空间">photo</a>相册</li>
+						
+						<!-- <li><a href="https://huluxia.com/" class="fa fa-cogs" rel="noopener" target="_blank"
+								title="葫芦侠">api</a>API
+						</li> -->
+						
+					</ul>
+					<!--联系方式-->
+					<ul class="copylaft">
+						<li><a href="https://wpa.qq.com/msgrd?v=3&uin=24513668&site=qq&menu=yes" class="fa fa-qq"
+								rel="noopener" target="_blank" title="24513668">QQ</a></li>
+						<li><a href="wx.jpg" class="fa fa-weixin" rel="noopener" target="_blank"
+								title="微信">微信</a></li>
+						<!-- <li><a href="微博" class="fa fa-weibo" rel="noopener" target="_blank"
+								title="期待您的关注">微博</a></li> -->
+						<!-- <li><a href="邮箱"
+								class="fa fa-envelope" rel="noopener" target="_blank" title="通过邮箱联系我">邮箱</a></li> -->
+					</ul>
+				</footer>
+			</section>
+			<!-- Footer -->
+			<footer id="footer">
+			</footer>
+		</div>
+		<div id="cd-top" onclick="call()" title="喜欢，就分享一下吧">分享</div>
+		<div id="player3"></div>
+		<!--引入核心js-->
+		<script src="./heheda/js/jquery-3.6.0.min.js"></script>
+		<!--落叶效果依赖-->
+		<script src="./heheda/js/su.js"></script>
+		<!--一言API-->
+		<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+		<!--页面逻辑-->
+		<script src="./heheda/js/index.js"></script>
+		<!-- 音乐播放器 -->
+		<!-- <script src="防止被说推广自己家播放器" defer></script>
+		<script src="防止被说推广自己家播放器" defer></script> -->
+		<!--PWA渐进式应用配置-->
+		<script async="async" type="module">
+			import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+			const el = document.createElement('pwa-update');
+			document.body.appendChild(el);
+		</script>
+		<!--当动态内容被禁止时引入的css-->
+		<noscript>
+			<link rel="stylesheet" href="./heheda/css/noscript.css" type="text/css">
+		</noscript>
+	</body>
 
 </html>
