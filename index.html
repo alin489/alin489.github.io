@@ -99,6 +99,27 @@
 	<!--body模块-->
 
 	<body class="is-loading" title="久违久违，欢迎您的到来！开始尽情探索吧！">
+		<script type="text/javascript">
+       (function(window){
+            var userAgent = navigator.userAgent; 
+            var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+            var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+            if(isIE || isIE11){
+                var str = "你的浏览器版本太低了,已经和时代脱轨了 :(";
+                var str2 = "推荐使用:谷歌,"
+                    + "火狐"
+                    + "等其他浏览器";
+                document.writeln("<pre style='text-align:center;color:#fff;background-color:#195B40; height:100%;border:0;position:fixed;top:0;left:0;width:100%;z-index:1234'>" +
+                    "<h2 style='padding-top:200px;margin:0'><strong>" + str + "<br/></strong></h2><h2>" +
+                    str2);
+                $('body').css('background','#fff');
+                document.execCommand("Stop"); 
+            }
+        })(window)
+        // $("#captchaimg").on("click", function(){
+        //   location.reload();
+        // });
+    </script>
 		<!-- Wrapper -->
 		<div id="wrapper">
 			<!-- Main -->
