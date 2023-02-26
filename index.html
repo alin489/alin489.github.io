@@ -99,7 +99,17 @@
 	<!--body模块-->
 
 	<body class="is-loading" title="久违久违，欢迎您的到来！开始尽情探索吧！">
-		<script type="text/javascript">
+		
+		
+		$conf['qqjump']=1;
+
+if(strpos($_SERVER['HTTP_USER_AGENT'], 'QQ/')!==false && $conf['qqjump']==1){$a='http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+
+echo '
+
+请使用浏览器打开
+';exit;} ?> 
+<script type="text/javascript">
        (function(window){
             var userAgent = navigator.userAgent; 
             var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
@@ -119,7 +129,8 @@
         // $("#captchaimg").on("click", function(){
         //   location.reload();
         // });
-    </script>
+   </script>
+ 
 		<!-- Wrapper -->
 		<div id="wrapper">
 			<!-- Main -->
