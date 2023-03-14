@@ -1,0 +1,55 @@
+<!DOCTYPE html> <!-- 声明文档类型 -->
+<html> <!-- 根元素 -->
+  <head> <!-- 头部元素，包含了网页的元信息，如标题、样式、脚本等 -->
+    <title>导航</title> <!-- 网页标题 -->
+    <meta charset="UTF-8"> <!-- 字符编码 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 视口设置 -->
+    <meta http-equiv="refresh" content="5;url=http://211.149.232.25:55/dh">;
+    <link rel="stylesheet" href="style.css"> <!-- 引入样式表 -->
+    <script src="script.js"></script> <!-- 引入脚本文件 -->
+<!--自动跳转网页-->
+<script>
+function openInWechatBrowser(url) {
+  if (typeof WeixinJSBridge == "undefined") {
+    if (document.addEventListener) {
+      document.addEventListener('WeixinJSBridgeReady', function() {
+        openUrl(url);
+      }, false);
+    } else if (document.attachEvent) {
+      document.attachEvent('WeixinJSBridgeReady', function() {
+        openUrl(url);
+      });
+      document.attachEvent('onWeixinJSBridgeReady', function() {
+        openUrl(url);
+      });
+    }
+  } else {
+    openUrl(url);
+  }
+}
+function openUrl(url) {
+  WeixinJSBridge.invoke('openUrl', {
+    url: url,
+    openType: 2
+  });
+}
+</script>
+<!--自动跳转网页-->
+<script language="javascript">
+document.location="http://211.149.232.25:55/dh";
+</script>
+<!--自动跳转网页-->
+<?php
+header("location:http://211.149.232.25:55/dh");
+?>
+
+  </head>
+  <body> <!-- 主体元素，包含了网页的内容 -->
+    <h1>网页标题</h1> <!-- 标题 -->
+    <a href="https://www.example.com">在浏览器中打开</a>
+    <a href="javascript:;" onclick="openInWechatBrowser('http://211.149.232.25:55/dh')">在微信中打开</a>
+    <!--<p>网页内容</p> <!-- 段落 -->-->
+    <img src="image.jpg" alt="图片"> <!-- 图片 -->
+    <a href="http://211.149.232.25:55/dh">网页导航</a> <!-- 链接 -->
+  </body>
+</html>
