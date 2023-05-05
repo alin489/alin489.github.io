@@ -10,13 +10,13 @@
     <style>
     </style>
 <script>
-    // 检测设备类型并决定是否跳转
-    function checkDevice() {
-      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      if (!isMobile) {
-        window.location.href = "http://211.149.232.25:55/denlu";
-      }
-    }
+// 检测设备类型
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+// 如果是电脑，则跳转到百度网站
+if (!isMobile) {
+  window.location.href = "https://www.baidu.com";
+}
 </script>
 </head>
 <body>
